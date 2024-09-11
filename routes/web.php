@@ -29,3 +29,5 @@ Route::get('/contatti', function () {
 })->name('contacts');
 
 Route::get('/', [PageController::class, 'index'])->name('home');
+Route::get('/movies/nationality/{nationality}', [PageController::class, 'filterByNationality'])->name('movies.filterByNationality');
+Route::get('/movies/vote/{vote}', [PageController::class, 'filterByVote'])->name('movies.filterByVote');
